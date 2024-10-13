@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.finance-input, #goal-tracker {
+    margin-bottom: 20px;
+}
+
+#summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #summary {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

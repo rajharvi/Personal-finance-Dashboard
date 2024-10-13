@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Personal Finance Dashboard</h1>
+
+    <div class="finance-input">
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="description" placeholder="Description">
+        <select id="category">
+            <option value="income">Income</option>
+            <option value="groceries">Groceries</option>
+            <option value="rent">Rent</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="date" id="date" required>
+        <button id="add-transaction">Add Transaction</button>
+    </div>
+
+    <div id="summary">
+        <p>Total Income: <span id="total-income">$0.00</span></p>
+        <p>Total Expenses: <span id="total-expenses">$0.00</span></p>
+        <p>Savings: <span id="savings">$0.00</span></p>
+    </div>
+
+    <div id="charts">
+        <canvas id="expense-chart" width="400" height="200"></canvas>
+        <canvas id="trend-chart" width="400" height="200"></canvas>
+    </div>
+
+    <div id="goal-tracker">
+        <p>Set Savings Goal: <input type="number" id="savings-goal" placeholder="Goal" required></p>
+        <button id="set-goal">Set Goal</button>
+        <div id="goal-progress">
+            <progress value="0" max="100"></progress>
+            <p>0% of goal achieved</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
